@@ -1,18 +1,23 @@
 'use strict';
 
-// Check if a message contains spam or sale
-function checkForSpam(message) {
-  const lowerCaseMessage = message.toLowerCase();
+// Return numbers greater than the given value
+function filterArray(numbers, value) {
+  const filteredNumbers = [];
 
-  // Check for forbidden words
-  return lowerCaseMessage.includes('spam') || lowerCaseMessage.includes('sale');
+  // Check each number in the array
+  for (const number of numbers) {
+    if (number > value) {
+      filteredNumbers.push(number);
+    }
+  }
+
+  // Return the filtered array
+  return filteredNumbers;
 }
 
 // Test the function
-console.log(checkForSpam('Latest technology news'));
-console.log(checkForSpam('JavaScript weekly newsletter'));
-console.log(checkForSpam('Get best sale offers now!'));
-console.log(checkForSpam('Amazing Sale, only tonight!'));
-console.log(checkForSpam('Trust me, this is not a spam message!'));
-console.log(checkForSpam('Get rid of sPaM emails. Our book is on sale!'));
-console.log(checkForSpam('[SPAM] How to earn fast money?'));
+console.log(filterArray([1, 2, 3, 4, 5], 3));
+console.log(filterArray([1, 2, 3, 4, 5], 4));
+console.log(filterArray([1, 2, 3, 4, 5], 5));
+console.log(filterArray([12, 24, 8, 41, 76], 38));
+console.log(filterArray([12, 24, 8, 41, 76], 20));
