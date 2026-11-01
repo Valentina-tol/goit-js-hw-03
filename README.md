@@ -1,3 +1,3 @@
-# goit-js-hw-01
+# goit-js-hw-03
 
-GoIT JavaScript Homework 01 – Functions and Calculations
+GoIT JavaScript Homework 03 – Arrays and Functions
